@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Metas tags obrigátorias-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <style>
+        .tm-social{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+    <title>Notícias</title>
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">Notícias</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Início <span class="sr-only" >(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Esportes">Esportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Tecnologia">Tecnologia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Política">Política</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Saude">Saúde</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Redes sociais
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://www.linkedin.com/in/henrique-marcelino-b00954191/" target="_blank ">Linkedin</a>
+                <a class="dropdown-item" href="https://www.google.com/intl/pt-BR/gmail/about/" target="_blank">E-mail</a>
+                <a class="dropdown-item" href="https://github.com/HenriqueMarcelino" target="_blank">Github</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+    <!--/Navbar-->
+
+    <!--Formulario-->
+    <form>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput">Name</label>
+      <input type="text" onkeyup="verificaNome()" class="form-control mb-2" id="inlineFormInput" placeholder="Informe seu nome">
+      <div id="txtNome"></div>
+    </div>
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input type="text" onkeyup="verificaLogin()" class="form-control" id="inlineFormInputGroup" placeholder="Login">
+        <div id="txtLogin"></div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+        <label class="form-check-label" for="autoSizingCheck">
+          Lembre me
+        </label>
+      </div>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-2" onclick="entra()">Entrar</button>
+    </div>
+  </div>
+</form>
+</nav>
+
+    <!--/Formulario-->
+
+    <!--Corousel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Imagens_1°desafio/Futebol.jpg" class="d-block w-100" alt="Esporte Futebol">
+          </div>
+          <div class="carousel-item">
+            <img src="Imagens_1°desafio/Tecnologia.jpg" class="d-block w-100" alt="Tecnologia">
+          </div>
+          <div class="carousel-item">
+            <img src="Imagens_1°desafio/Política.jpg" class="d-block w-100" alt="Politica">
+          </div>
+          <div class="carousel-item">
+            <img src="Imagens_1°desafio/Moda.jpg" class="d-block w-100" alt="Moda">
+          </div>
+          <div class="carousel-item">
+            <img src="Imagens_1°desafio/Saude.jpg" class="d-block w-100" alt="Saude">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    <!--/Corousel-->
+
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Principais notícias</h1>
+          <p class="lead">Vejam as principais noticias de esportes, tecnologias, politicas, moda e saúde </p>
+        </div>
+      </div>
+    <!--/Jumbotron-->
+
+    <!--Card-->
+    
+    <div class="container " id="Saude">
+   <div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="Imagens_1°desafio/coronavirus.jpg" class="card-img-top" class= "Saude" alt="Imagem de vacina para o corona virus">
+      <div class="card-body">
+        <h5 class="card-title">Saúde</h5>
+        <p class="card-text">Desde o início da pandemia, o país acumula 5.409.854 casos confirmados de covid-19. Em 24 horas, 
+        foram registrados 15.726. As informações foram divulgadas nesta segunda-feira (26/10) no site sobre coronavírus do Ministério 
+        da Saúde. O número de óbitos teve o acréscimo de 263 e o total chega a 157.397.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4" id=Política>
+    <div class="card">
+      <img src="Imagens_1°desafio/candidatos.jpg" class="card-img-top" class = "Política" alt="Imagem de uma pessoa sem mostra o rosto de candidato a presidente">
+      <div class="card-body">
+        <h5 class="card-title">Candidatos a Prefeitos de São Paulo</h5>
+        <p class="card-text">Líderes nas pesquisas de intenção de voto do Datafolha e do Ibope, o deputado federal Celso Russomanno (Republicanos) 
+        e o atual prefeito, Bruno Covas (PSDB) são os dois principais nomes do momento para chegar à Prefeitura de São Paulo.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4" id="Esportes">
+    <div class="card">
+      <img src="Imagens_1°desafio/Esportes_diversos.jpg" class="card-img-top" class="Esportes" alt="Imagem de varios esportes">
+      <div class="card-body">
+        <h5 class="card-title">Esportes</h5>
+        <p class="card-text">Que o esporte faz bem para a saúde isso ninguém tem dúvidas. Mas você já parou para pensar sobre a influência 
+        do esporte no desenvolvimento das pessoas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4" id="Tecnologia">
+    <div class="card">
+      <img src="Imagens_1°desafio/Programador.jpg" class="card-img-top" class = "tecnologia" alt="Imagem de uma pessoa programando">
+      <div class="card-body">
+        <h5 class="card-title">Tecnologia</h5>
+        <p class="card-text">"O desenvolvedor é imprescindível para diferentes áreas em um negócio. Desde a criação de um site que irá permitir 
+        que lojas físicas se tornem e-commerces até a otimização e automação de processos internos que aumentam a eficiência operacional das empresas", 
+        declarou Eber Duarte, diretor de Tecnologia da Catho.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!--/Card-->
+
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Dicas</h1>
+          <p class="lead">Vejam o video de prevenção contra o corona virus</p>
+        </div>
+      </div>
+    <!--/Jumbotron-->
+
+    <!--Texto e Video-->
+
+    <div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-6">
+            <h3>Dica de prevenção contra o corona virus</h3>
+            <p>Para evitar a propagação da COVID-19, faça o seguinte:
+              Lave suas mãos com frequência. Use sabão e água ou álcool em gel.
+              Mantenha uma distância segura de pessoas que estiverem tossindo ou espirrando.
+              Use máscara quando não for possível manter o distanciamento físico.
+              Não toque nos olhos, no nariz ou na boca.
+              Cubra seu nariz e boca com o braço dobrado ou um lenço ao tossir ou expirar.
+              Fique em casa se você se sentir indisposto.
+              Procure atendimento médico se tiver febre, tosse e dificuldade para respirar.
+            </p>
+        </div>
+
+        <div class= "col-md-6">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oloC4q1aHus" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+          gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--/Texto e Video-->
+
+    <!--Roda pé-->
+
+    <footer>
+
+      <hr>
+      
+      <div class="row mb-3">
+
+        <div class="col-md-12 d-flex justify-content-center">
+          <a href="https://www.linkedin.com/in/henrique-marcelino-b00954191/" target="_blank " class="p-3">
+            <img class="tm-social" src="imagens_RedesSocial/linkedin.png" alt="Logo do linkedin">
+        </a>
+       
+        <a href="https://www.google.com/intl/pt-BR/gmail/about/" target="_blank" class="p-3" >
+             <img class="tm-social" src="imagens_RedesSocial/gmail.png" alt="Logo do gmail" >
+       </a> 
+
+       <a href="https://github.com/HenriqueMarcelino" target="_blank" class="p-3">
+            <img class="tm-social" src="imagens_RedesSocial/github.png" alt="Logo Github">
+       </a> 
+        </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">
+              Todos os direitos reservados: Henrique Marcelino &copy;
+            </p>
+          </div>
+
+      </div>
+  
+</footer>
+
+<!--/Roda Pé-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+</body>
+</html>
